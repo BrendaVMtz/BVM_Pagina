@@ -23,8 +23,6 @@ const agregarTarea = () => {
         tareas.push(nuevaTarea)
     }
 
-    console.log(Asignaciones.materias1)
-
     materiaTexto.value = ''
     tareaTexto.value = ''
    
