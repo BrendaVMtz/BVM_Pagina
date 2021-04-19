@@ -1,31 +1,21 @@
 
-
 ///Variables
 const formulario = document.querySelector('#formulario')
 const materiaTexto = document.querySelector('#materiaTexto')
 const tareaTexto = document.querySelector('#tareaTexto')
 const lista = document.querySelector('#lista')
 const tareas = [] 
-const materias = []
 
 //Funciones
 
 const agregarTarea = () => {
-    const nuevaTarea = (tareaTexto.value )
-    const nuevaMateria = (materiaTexto.value)
-
-
-    if(nuevaMateria && nuevaMateria.length>0){
-        materias.push(nuevaMateria)
-    }
-
+    const nuevaTarea = (materiaTexto.value + " " + tareaTexto.value )
     if(nuevaTarea && nuevaTarea.length > 0){
         tareas.push(nuevaTarea)
     }
-
     materiaTexto.value = ''
     tareaTexto.value = ''
-   
+    console.log(tareas)
 
 }
 
@@ -50,5 +40,4 @@ formulario.addEventListener('submit', (event) => {
     agregarTarea()
     mostrarTareas()
 })
-
 
