@@ -36,7 +36,7 @@ const mostrarTareas = () => {
 }
 
 const generarUnaTarea = (materia,tarea, id) => {
-    return `<li id="t${id}"> ${materia}: ${tarea} <span onclick="eliminarTarea(${id})" class="icon-circle-with-cross"></span></li>`
+    return `<li id="t${id}"> <span class="materia">${materia}:</span><span class="tarea">${tarea}</span> <span onclick="eliminarTarea(${id})" class="icon-circle-with-cross"></span></li>`
 }
 
 const eliminarTarea = (id) => {

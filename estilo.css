@@ -3,6 +3,8 @@ body {
 	padding: 0;
   background-image:  url("fondo.png");
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
@@ -109,7 +111,7 @@ body {
 }
 
 .lista-contenido li {
-  list-style: none;
+  list-style: none;  
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
   color: #202352;
@@ -129,4 +131,12 @@ body {
 
   color: #EF9313;
   transition: 0.2s ease;
+}
+
+.materia {
+  color: #EF9313;
+}
+
+.tarea {
+  color: #202352;
 }
