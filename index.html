@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="agenda" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>To Do</title>
 </head>
 <body>
-    <section class="fecha">
-        <div id="fecha" class="fecha">Hola, hoy es <span></span></div>
+
+    <main class="container">
+        
+    </main>
+    <section class="titulo">
+        <div class="texto"><h1>TO DO LIST</h1></div>
+        <div class="fecha"><span id="fecha"></span></div>
     </section>
     <section class="formulario">
         <form id="formulario">
-            <label for="materia">Materia</label>
-            <input type="text" id="materiaTexto" name="materia" required = "" placeholder="Agregar materia... ">
-            <label for="tarea">Tarea</label>
-            <input type="text" id= "tareaTexto" name="tarea" required = "" placeholder="Agregar Tarea ..."> 
-            <input type="submit" value="Agregar">
+            <div class="formulario-input">
+                <label for="materia">Materia</label>
+                <input type="text" id="materiaTexto" name="materia" required = "" placeholder="Agregar materia... ">
+            </div>
+            <div class="formulario-input">
+                <label for="tarea">Tarea</label>
+                <input type="text" id= "tareaTexto" name="tarea" required = "" placeholder="Agregar Tarea ..."> 
+            </div>
+            <div class="formulario-sumbit">
+                <button type="submit">Agregar</button>
+
+            </div>
+            
         </form>
     </section>
     <section class="lista">
-        <ul id="lista">
-            <li><span>Lista de Tareas</span></li>
+        <p class="lista-titulo">Lista de Tareas</p>
+        <ul id="lista" class="lista-contenido">
+            
         </ul>
     </section>
     

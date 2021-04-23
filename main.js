@@ -5,6 +5,7 @@ const materiaTexto = document.querySelector('#materiaTexto')
 const tareaTexto = document.querySelector('#tareaTexto')
 const lista = document.querySelector('#lista')
 const tareas = [] 
+const fecha = document.querySelector('#fecha')
 
 //Funciones
 
@@ -29,13 +30,13 @@ const mostrarTareas = () => {
     let html = '', i=0
     tareas.forEach((id) => {
         const valores = Object.values(id)
-        html += generarUnaTarea(valores[1], valores[0], i++)
+        html += generarUnaTarea(valores[0], valores[1], i++)
     })
     lista.innerHTML = html
 }
 
 const generarUnaTarea = (materia,tarea, id) => {
-    return `<li id="t${id}"> ${materia} ${tarea} <span onclick="eliminarTarea(${id})">❌</span></li>`
+    return `<li id="t${id}"> ${materia}: ${tarea} <span onclick="eliminarTarea(${id})" class="icon-circle-with-cross"></span></li>`
 }
 
 const eliminarTarea = (id) => {
@@ -44,7 +45,12 @@ const eliminarTarea = (id) => {
 
 }
 
-
+const obtenerFecha = () => {
+    let hoy = new Date();
+    let fechaHoy = hoy.toLocaleDateString()
+    fecha.innerHTML = fechaHoy
+}
+obtenerFecha();
 
 //event listeners
 
